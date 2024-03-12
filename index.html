@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tire Tread Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/bg.jpg')
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+			color: white;
+			font-family: cursive;
+        }
+
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type='file'] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        input[type='submit'] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type='submit']:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>TIRE TREAD CLASSIFICATION</h1>
+    <form action='/predict' method='post' enctype='multipart/form-data'>
+        <label for='image'>Upload an image of the tire tread:</label>
+        <input type='file' name='image'>
+        <input type='submit' value='Submit'>
+    </form>
+</body>
+</html>
